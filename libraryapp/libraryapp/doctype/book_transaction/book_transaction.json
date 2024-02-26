@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:book_name",
+ "creation": "2024-02-24 14:40:01.081489",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "book",
+  "book_name",
+  "member",
+  "book_transaction_type",
+  "column_break_lrdsi",
+  "borrowing_date",
+  "return_date",
+  "issued_by",
+  "book_status",
+  "available_copies",
+  "payments_to_be_made_section",
+  "fee",
+  "fine_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Book",
+   "options": "Book",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "fee",
+   "fieldtype": "Data",
+   "label": "Current Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LBB-INS-.YYYY.-",
+   "print_hide": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "book_transaction_type",
+   "fieldtype": "Select",
+   "label": "Book Transaction Type",
+   "options": "Issue\nReturn"
+  },
+  {
+   "fieldname": "column_break_lrdsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "borrowing_date",
+   "fieldtype": "Date",
+   "label": "Borrowing Date"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "default": "0.0",
+   "fieldname": "fine_amount",
+   "fieldtype": "Data",
+   "label": "Fine Amount Applicable",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Link",
+   "label": "Issued By",
+   "options": "User"
+  },
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Book Name",
+   "options": "Book",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "0.0",
+   "fieldname": "available_copies",
+   "fieldtype": "Data",
+   "label": "Available Copies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payments_to_be_made_section",
+   "fieldtype": "Section Break",
+   "label": "Payments To be Made"
+  },
+  {
+   "fieldname": "book_status",
+   "fieldtype": "Select",
+   "label": "Book Status",
+   "options": "Lost\nOverdue\nChecked Out\nAvailable\nChecked Out\nOn Hold\nReserved\nIn Transit\nDamaged"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-25 01:28:58.399682",
+ "modified_by": "Administrator",
+ "module": "Libraryapp",
+ "name": "Book Transaction",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
